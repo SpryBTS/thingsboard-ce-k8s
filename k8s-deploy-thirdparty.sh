@@ -19,7 +19,7 @@ set -e
 
 source .env
 
-if [ "$PLATFORM" == "minikube" ]; then
+if [ "$PLATFORM" == "minikube" ] || [ "$PLATFORM" == "spry-lab" ]; then
     kubectl apply -f common/tb-namespace.yml
 fi
 

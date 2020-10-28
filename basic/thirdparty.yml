@@ -270,7 +270,7 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 200Mi
+            storage: 1Gi
     - metadata:
         name: app-logs
       spec:
@@ -278,7 +278,7 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 200Mi
+            storage: 1Gi
     - metadata:
         name: config
       spec:
@@ -286,7 +286,7 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 50Mi
+            storage: 100Mi
 ---
 apiVersion: v1
 kind: Service

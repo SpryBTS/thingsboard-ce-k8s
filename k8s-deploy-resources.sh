@@ -34,7 +34,7 @@ kubectl apply -f $DEPLOYMENT_TYPE/tb-node-cache-configmap.yml
 kubectl apply -f common/tb-node.yml
 
 
-if [ "$PLATFORM" == "minikube" ]; then
+if [ "$PLATFORM" == "minikube" ] || [ "$PLATFORM" == "spry-lab" ] ; then
     kubectl apply -f $PLATFORM/routes.yml
 elif [ "$PLATFORM" == "openshift" ]; then
     oc create -f $PLATFORM/routes.yml
